@@ -1,0 +1,9 @@
+@charset "UTF-8";
+
+.fa-phone-alt:before {
+    content: "\f879";
+}
+
+.fas {
+	font-weight: 900;
+}

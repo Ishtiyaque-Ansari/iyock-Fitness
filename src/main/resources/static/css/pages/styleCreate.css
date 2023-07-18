@@ -1,0 +1,103 @@
+@charset "UTF-8";
+
+body {
+  width: 100%;
+  background-image :linear-gradient( 
+  					115deg,
+  					rgba(58, 58, 158, 0.8), 
+  					rgba(136, 136, 206, 0.7) ), 
+  					url(https://lutzchiro.com/wp-content/uploads/2015/04/home_gym_bg.jpg);
+  height: 80vh;
+  margin: 0;
+  color: #f5f6f7;
+  font-family: Tahoma;
+  font-size: 16px;
+}
+
+h1, p {
+	text-align: center;
+}
+
+input[type=submit] {
+	display: block;
+    width: 45%;
+    margin: 0em auto;
+    height: 3rem;
+    font-size: 23px;
+    background-color: #3b3b4f;
+    border-color: white;
+    min-width: fit-content;
+}
+
+input[type="text"], input[type="password"], input[type="tel"], input[type="email"], input[type="number"] {
+  background-color: #0a0a23;
+  border: 1px solid #0a0a23;
+  color: #ffffff;
+  text-align: center;
+  width: 100%;
+  height: 36px;
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.health {
+  background-color: #0a0a23;
+  border: 1px solid #0a0a23;
+  color: #ffffff;
+  text-align: center;
+  width: 100%;
+  height: 40px;
+  font-size: 26px;
+}
+
+.add {
+  background-color: #0a0a23;
+  border: 1px solid #0a0a23;
+  color: #ffffff;
+  text-align: center;
+  font-size: large;
+  width: 100%;
+  height: 80px;
+  font-size: 26px;
+}
+
+.line {
+	margin-top: 10px;
+    margin-bottom: -14px;
+}
+
+label {
+  /* display: block; */
+  margin: 0.5rem 0;
+}
+input[type="date"] {
+	margin-top: 1px;
+}
+fieldset {
+  border: none;
+  padding: 2rem 0;
+  border-bottom: 3px solid #3b3b4f;
+}
+
+fieldset:last-of-type {
+  border-bottom: none;
+}
+
+.block {
+	display: block;
+}
+
+form {
+  width: 60vw;
+  max-width: 500px;
+  min-width: 300px;
+  margin: 0 auto;
+  padding-bottom: 2em;
+  color: #16082f;
+  font-size: x-large;
+}
+
+.bloc {
+	margin-left: 9rem;
+    margin-bottom: 1rem;
+}

@@ -1,0 +1,75 @@
+@charset "UTF-8";
+
+
+body {
+    font-family: sans-serif;
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 1.4;
+    color: #16082f;
+    margin: 0;
+}
+h1 {
+	text-align: center;
+}
+input {
+	border-width: thick;
+    height: 33px;
+    margin-left: 2px;
+    margin-right: -33px;
+    width: 98%;
+    margin-top: 9px;
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-family: ui-monospace;
+}
+
+input[name="username"], input[name="password"] {
+	text-align : center;
+	font-size : 22px;
+}
+
+.size {
+	height: 40px;
+    font-size: 22px;
+    width: 150px;
+    margin-left: 140px;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background: antiquewhite;
+    background-image: linear-gradient( 
+    115deg,
+    rgba(58, 58, 158, 0.8), 
+    rgba(136, 136, 206, 0.7) ), 
+    url(https://1.bp.blogspot.com/-CeGJye5p9ac/XbEA3yPLX6I/AAAAAAAAAK8/zOyuOWTDGrMDa020rsZVvo_r1GLLhbuOQCLcBGAsYHQ/w1200-h630-p-k-no-nu/Bodybuilder-Barbell-Biceps-Curl-1109.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.btnsubmit {
+	color: maroon;
+}
+
+.center {
+	position: absolute;
+    top: 46%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 181px;
+    border-color: #16082f;
+    border-width: 4px;
+}
+
+.rtext {
+	color : black;
+	font-size: 25px; 
+}
