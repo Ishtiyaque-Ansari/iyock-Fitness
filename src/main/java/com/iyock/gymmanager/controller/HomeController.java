@@ -16,7 +16,7 @@ public class HomeController {
 		return "pages/CreateOne";
 	}
 
-	@GetMapping("/index")
+	@GetMapping({"/","/index"})
 	public String index() {
 		return "index";
 	}
