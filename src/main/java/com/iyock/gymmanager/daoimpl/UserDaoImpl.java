@@ -42,4 +42,10 @@ public class UserDaoImpl implements UserDao{
 	public User create(User user) {
 		return userRepo.save(user);
 	}
+	
+	@Override
+	public User searchByLogin(User user) {
+		return userRepo.findByUsernameAndPassword(user.getUsername(), user.getPassword());
+	}
+
 }

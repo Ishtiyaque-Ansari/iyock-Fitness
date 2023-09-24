@@ -29,9 +29,6 @@ a {
 	font-weight: 600;
 }
 
-.active :active {
-	text-decoration: underline white;
-}
 
 .nav-button:hover {
 	text-decoration: underline;

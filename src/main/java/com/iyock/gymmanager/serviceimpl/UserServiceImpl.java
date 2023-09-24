@@ -19,4 +19,11 @@ public class UserServiceImpl implements UserService{
 		return userDao.create(user);
 	}
 
+	@Override
+	public User searchByLogin(User user) {
+		// TODO Auto-generated method stub
+		
+		return userDao.searchByLogin(user);
+	}
+
 }

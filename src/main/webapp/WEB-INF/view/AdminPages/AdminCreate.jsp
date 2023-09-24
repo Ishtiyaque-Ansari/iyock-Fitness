@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>create one</title>
-<link href="css/pages/styleCreate.css" rel="stylesheet" type="text/css" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Iyock Fitness & Gym</title>
+<link href="../css/pages/styleCreate.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <div id="main-container">
         <div id="form-container">
             <div id="content">
                 <span class="title-text">Registration Form</span>
-                <form action="User/create" id="create-form" method="post">
+                <form action="create" id="create-form" method="post">
                     <div class="field">        
-                        <input type="text" form="create-form" name="firstname" required />
+                        <input type="text" form="create-form" name="firstName" required />
                         <label>first Name</label>
                         <input type="text" form="create-form" name="lastName" required />
-                        <label style="margin-left: 196px;">Second Name</label>
+                        <label style="margin-left: 196px;">Last Name</label>
                     </div>
 
                     <div class="field">        

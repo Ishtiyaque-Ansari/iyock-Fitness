@@ -9,4 +9,6 @@ public interface UserDao {
 
 	User create(User user);
 	
+	User searchByLogin(User user);
+	
 }

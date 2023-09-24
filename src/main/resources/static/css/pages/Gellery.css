@@ -29,9 +29,6 @@ a {
 	font-weight: 600;
 }
 
-.active :active {
-	text-decoration: underline white;
-}
 
 .nav-button:hover {
 	text-decoration: underline;
@@ -43,10 +40,6 @@ a {
 
 .align-items-center {
 	align-items: center !important;
-}
-
-*, ::after, ::before {
-	box-sizing: border-box;
 }
 
 .icons {

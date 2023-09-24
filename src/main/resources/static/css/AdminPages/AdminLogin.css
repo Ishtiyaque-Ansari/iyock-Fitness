@@ -1,4 +1,4 @@
-
+@charset "UTF-8";@charset "UTF-8";
 body {
     background-color: black;
     color: white;
@@ -11,7 +11,7 @@ body {
     align-items: center;
     height: 100%;
     width: 100%;
-    top: 1px;
+    top: 5rem;
 }
 
 #form-cantainer {
@@ -24,7 +24,7 @@ body {
     border-radius: 50%;
     content: '';
     height: 30px;
-    top: 80px;
+    top: 18px;
     width: 30px;
     position: absolute;
     background: #f3e125;
@@ -35,16 +35,15 @@ body {
 #form-container::after {
     border-radius: 50%;
     content: '';
-    width: 30px;
     height: 30px;
-    right: 25rem;
-    /* right: 0; */
+    width: 30px;
     position: absolute;
-    bottom: 18px;
     background: #29b4ff;
-    z-index: -1;
-    box-shadow: -20px 0px 50px 40px #29b4ff;
+    box-shadow: 20px 0px 50px 40px #29b4ff;
     animation: floating 3s ease-in-out infinite alternate;
+    bottom: 18px;
+    right: 30rem;
+    z-index: -1;    
 }
 
 input:focus {
@@ -53,9 +52,8 @@ input:focus {
 
 #content {
     font-size: 2rem;
-    border: 3px solid #626262c2;
+    border: 1px solid #626262c2;
     padding: 1.5rem;
-    margin-top: 5rem;
     width: 100%;
     border-radius: 15px;
     background: #62626212;
@@ -88,7 +86,7 @@ input:focus {
     background: none;
     padding: 5px 0;
     margin-top: 32px;
-    width: 49%;
+    width: 100%;
 }
 
 .field input:focus+label, .field input:valid+label {
@@ -114,28 +112,37 @@ label input {
     cursor: pointer;
 }
 
-#createone {
+#forget:hover, #signup a:hover {
+    color: rgb(186, 186, 186);
+}
+
+#login {
     padding: 6px 18px;
     border-radius: 30px;
     font-weight: bold;
     width: 100%;
     border: none;
-    color: black;
     font-size: 1rem;
     cursor: pointer;
     background: #ffffff;
-    margin-top: 1rem;
     transition: .3s;
 }
 
-#createone:hover {
+#login:hover {
     transform: scale(0.9);
+}
+
+#signup {
+    color: #bcbcbc;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 25px;
 }
 
 @keyframes floating {
     from {
         transform: scale(0.7);
-    }   
+    }
 
     to {
         transform: scale(1);

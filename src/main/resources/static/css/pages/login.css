@@ -1,75 +1,150 @@
 @charset "UTF-8";
-
-
 body {
-    font-family: sans-serif;
-    font-size: 2rem;
-    font-weight: 400;
-    line-height: 1.4;
-    color: #16082f;
-    margin: 0;
-}
-h1 {
-	text-align: center;
-}
-input {
-	border-width: thick;
-    height: 33px;
-    margin-left: 2px;
-    margin-right: -33px;
-    width: 98%;
-    margin-top: 9px;
-    margin-bottom: 8px;
-    font-weight: 600;
-    font-family: ui-monospace;
+    background-color: black;
+    color: white;
 }
 
-input[name="username"], input[name="password"] {
-	text-align : center;
-	font-size : 22px;
-}
-
-.size {
-	height: 40px;
-    font-size: 22px;
-    width: 150px;
-    margin-left: 140px;
-}
-
-body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
+#main-container {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
     height: 100%;
     width: 100%;
+    top: 5rem;
+}
+
+#form-cantainer {
+    width: 350px;
+    display: flex;
+    position: relative;
+}
+
+#form-container::before {
+    border-radius: 50%;
+    content: '';
+    height: 30px;
+    top: 18px;
+    width: 30px;
+    position: absolute;
+    background: #f3e125;
+    box-shadow: 20px 0px 50px 40px #f3e125;
+    animation: floating 3s ease-in-out infinite alternate;
+}
+
+#form-container::after {
+    border-radius: 50%;
+    content: '';
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    background: #29b4ff;
+    box-shadow: 20px 0px 50px 40px #29b4ff;
+    animation: floating 3s ease-in-out infinite alternate;
+    bottom: 18px;
+    right: 30rem;
+    z-index: -1;    
+}
+
+input:focus {
+    outline: none;
+}
+
+#content {
+    font-size: 2rem;
+    border: 1px solid #626262c2;
+    padding: 1.5rem;
+    width: 100%;
+    border-radius: 15px;
+    background: #62626212;
+    backdrop-filter: blur(30px);
+    font-family: calibri;
+}
+
+.title-text {
+    display: block;
+    text-align: center;
+    color: white;
+}
+
+.field {
+    position: relative;
+}
+
+.field label {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 5px;
     z-index: -1;
-    background: antiquewhite;
-    background-image: linear-gradient( 
-    115deg,
-    rgba(58, 58, 158, 0.8), 
-    rgba(136, 136, 206, 0.7) ), 
-    url(https://1.bp.blogspot.com/-CeGJye5p9ac/XbEA3yPLX6I/AAAAAAAAAK8/zOyuOWTDGrMDa020rsZVvo_r1GLLhbuOQCLcBGAsYHQ/w1200-h630-p-k-no-nu/Bodybuilder-Barbell-Biceps-Curl-1109.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    transition: .4s;
 }
 
-.btnsubmit {
-	color: maroon;
+.field input {
+    color: white;
+    border: none;
+    border-bottom: 1px solid #3f3f3f;
+    background: none;
+    padding: 5px 0;
+    margin-top: 32px;
+    width: 100%;
 }
 
-.center {
-	position: absolute;
-    top: 46%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: 181px;
-    border-color: #16082f;
-    border-width: 4px;
+.field input:focus+label, .field input:valid+label {
+    bottom: 25px;
+    font-size: 13px;
 }
 
-.rtext {
-	color : black;
-	font-size: 25px; 
+#action {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0 30px;
+}
+
+label {
+    font-size: 14px;
+    display: flex;
+    color: d0d0d0;
+    cursor: pointer;
+}
+
+label input {
+    margin-right: 3px;
+    cursor: pointer;
+}
+
+#forget:hover, #signup a:hover {
+    color: rgb(186, 186, 186);
+}
+
+#login {
+    padding: 6px 18px;
+    border-radius: 30px;
+    font-weight: bold;
+    width: 100%;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    background: #ffffff;
+    transition: .3s;
+}
+
+#login:hover {
+    transform: scale(0.9);
+}
+
+#signup {
+    color: #bcbcbc;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 25px;
+}
+
+@keyframes floating {
+    from {
+        transform: scale(0.7);
+    }
+
+    to {
+        transform: scale(1);
+    }
 }

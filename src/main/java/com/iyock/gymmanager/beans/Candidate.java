@@ -2,6 +2,7 @@ package com.iyock.gymmanager.beans;
 
 import java.util.Set;
 
+import jakarta.persistence.Embeddable;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -10,6 +11,7 @@ import jakarta.persistence.OneToMany;
 import com.iyock.gymmanager.type.Package;
 
 @Entity
+@Embeddable
 public class Candidate extends User {
 	
 	@Id @GeneratedValue(strategy = GenerationType.AUTO)
