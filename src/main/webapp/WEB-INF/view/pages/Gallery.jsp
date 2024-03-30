@@ -173,7 +173,7 @@ header+* {
 		<div class="row mt-3">
 			<div class="col-3">
 				<img alt="gym-images"
-					src="https://images.homegyms.biz/l-m/new-heavy-duty-fitness-workout-exercise-equipment-oKjsdKOtBb-YoQ.jpg">
+					src="https://th.bing.com/th/id/OIP.ju3v7gyddDXN6aSSZYzRewHaE8?w=1200&h=800&rs=1&pid=ImgDetMain">
 			</div>
 			<div class="col-3">
 				<img alt="gym-images"

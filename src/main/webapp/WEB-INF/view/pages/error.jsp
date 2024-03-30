@@ -7,6 +7,6 @@
 <title>Error Page</title>
 </head>
 <body>
-Creation Error
+${message}
 </body>
 </html>

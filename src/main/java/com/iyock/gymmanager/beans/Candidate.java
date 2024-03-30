@@ -25,4 +25,5 @@ public class Candidate extends User {
 	private Set<Fee> fee;
 	
 	private Package feePackage;
+	
 }

@@ -11,7 +11,7 @@
         <div id="form-container">
             <div id="content">
                 <span class="title-text">Login</span>
-                <form id="login-form" action="/GymManager/User/login" method="post">
+                <form id="login-form" action="/User/login" method="post">
                     <div class="field">
                         <input type="text" name="username" required>
                         <label>Username</label>

@@ -3,9 +3,9 @@ package com.iyock.gymmanager.repository;
 import org.springframework.data.repository.ListCrudRepository;
 import org.springframework.stereotype.Repository;
 
-import com.iyock.gymmanager.beans.Candidate;
+import com.iyock.gymmanager.beans.Member;
 
 @Repository
-public interface CandidateRepo extends ListCrudRepository<Candidate, Integer> {
-	
+public interface MemberRepo extends ListCrudRepository<Member, Integer> {
+
 }

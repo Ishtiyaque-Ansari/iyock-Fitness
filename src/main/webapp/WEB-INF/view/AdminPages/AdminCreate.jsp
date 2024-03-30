@@ -67,5 +67,6 @@
 			}
 		}
     </script>
+    <script src="vendor/css/bootstrap.bundle.min.js"></script>
 </body>
 </html>

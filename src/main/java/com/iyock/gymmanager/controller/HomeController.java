@@ -3,7 +3,12 @@ package com.iyock.gymmanager.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.iyock.gymmanager.beans.User;
+import com.iyock.gymmanager.service.NotificationService;
 import com.iyock.gymmanager.service.UserService;
+import com.iyock.gymmanager.serviceimpl.NotificationServiceImpl;
 
 @Controller
 public class HomeController {
@@ -42,8 +47,12 @@ public class HomeController {
 	}
 
 	@GetMapping("/Admission")
-	public String admission() {
-		return "pages/Admission";
+	public ModelAndView admission() {
+		ModelAndView mav = new ModelAndView(); // Your method logic here
+		mav.addObject("createUrl", "/Member/create");
+		mav.addObject("loginType", "Candidate");//TODO maybe removed
+		mav.setViewName("pages/Admission");
+		return mav;
 	}
 	
 }

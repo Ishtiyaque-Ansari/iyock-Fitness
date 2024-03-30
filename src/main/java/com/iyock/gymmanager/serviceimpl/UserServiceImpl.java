@@ -1,5 +1,7 @@
 package com.iyock.gymmanager.serviceimpl;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -24,6 +26,11 @@ public class UserServiceImpl implements UserService{
 		// TODO Auto-generated method stub
 		
 		return userDao.searchByLogin(user);
+	}
+
+	@Override
+	public List<User> getAllMembers() {
+		return userDao.getAllMembers();
 	}
 
 }

@@ -1,14 +1,12 @@
 package com.iyock.gymmanager.repository;
 
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.repository.ListCrudRepository;
 import org.springframework.stereotype.Repository;
 
 import com.iyock.gymmanager.beans.User;
 
-import jakarta.persistence.NamedQuery;
-
 @Repository
-public interface UserRepo extends CrudRepository<User, Integer> {
+public interface UserRepo extends ListCrudRepository<User, Integer> {
  
 	User findByUsernameAndPassword(String username, String password);
 }

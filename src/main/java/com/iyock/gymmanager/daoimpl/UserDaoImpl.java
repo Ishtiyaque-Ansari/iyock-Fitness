@@ -3,10 +3,10 @@ package com.iyock.gymmanager.daoimpl;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-import org.springframework.stereotype.Service;
 
 import com.iyock.gymmanager.beans.User;
 import com.iyock.gymmanager.dao.UserDao;
@@ -46,6 +46,12 @@ public class UserDaoImpl implements UserDao{
 	@Override
 	public User searchByLogin(User user) {
 		return userRepo.findByUsernameAndPassword(user.getUsername(), user.getPassword());
+	}
+
+	@Override
+	public List<User> getAllMembers() {
+		// TODO Auto-generated method stub
+		return userRepo.findAll();
 	}
 
 }

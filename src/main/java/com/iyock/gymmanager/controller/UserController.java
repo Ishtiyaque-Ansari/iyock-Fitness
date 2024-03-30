@@ -34,6 +34,7 @@ public class UserController {
 		User createdUser = userService.create(user);
 		createdUser.setPassword(null);
 		modelAndView.addObject("loginType", "Candidate");
+		modelAndView.addObject("createdUser", createdUser);
 		modelAndView.setViewName("redirect:/index");
 		return modelAndView;	
 	}
@@ -68,5 +69,9 @@ public class UserController {
 
 	}
 	
+	@GetMapping("/getPageName")
+	public ResponseEntity<String> getPageName(String name) {
+		return ResponseEntity.ok(name + " is Success");
+	}
 	
 }

@@ -52,26 +52,27 @@
 	animation: typing 2.5s steps(15) infinite alternate-reverse;
 }
 
-@keyframes typing {
-	from {
-	width: 0ch;
-	} to {
-	width: 15ch;
-	}
+@keyframes typing {from { width:0ch;
+	
 }
 
+to {
+	width: 15ch;
+}
+
+}
 to {
 	width: 13ch;
 }
 
 }
-.visits {
+.booked {
 	background-image: radial-gradient(circle at center, rgba(42, 46, 64, 0)
 		0%, #2a2e40 70%),
-		url(https://img5.goodfon.com/wallpaper/nbig/4/d9/giria-ganteli-sportivnyi-snariad-zdorovyi-obraz-zhizni-gante.jpg)
+		url(http://www.zastavki.com/pictures/originals/2015/Girls_Athletic_girl_bodybuilder_095195_.jpg)
 		!important;
-	height: 40rem;
-	width: 70rem;
+	/* height: 40rem;
+	width: 70rem; */
 }
 
 header+* {
@@ -122,7 +123,8 @@ header+* {
 				</div>
 			</div>
 			<div class="carousel-item">
-				<img src="https://images3.alphacoders.com/107/1079633.jpg"
+				<img
+					src="http://www.zastavki.com/pictures/originals/2015/Girls_Athletic_girl_bodybuilder_095195_.jpg"
 					class="d-block w-100" alt="third-slide">
 				<div class="carousel-caption d-none d-md-block"
 					style="text-align: center">
@@ -149,16 +151,16 @@ header+* {
 	<div class="container">
 		<div class="row">
 			<div class="col-3 mt-4">
-				<img class="rounded" alt="Gym Images"
-					src="https://tse2.mm.bing.net/th?id=OIP.iuSsuiA_1kF2Hb-oWxPexwHaHa&pid=Api&P=0&h=180">
+				<img style="width:12rem;" class="rounded" alt="Gym Images"
+					src="https://res.cloudinary.com/dsmtool-com/image/fetch/if_w_lte_500/w_550/e_improve/if_end/if_w_gt_1600/w_1600/if_end/https://i5.walmartimages.com/asr/bc404e02-9509-4534-abd5-1e79c07d4f5b_1.75d9664f62743478e5a278a6e8952e13.jpeg	">
 				<p class="text-center mt-5" style="font-family: FontAwesome;">Your
 					clients come to your gym to improve their health and fitness.
 					However, if you don’t train them to use your equipment correctly,
 					they could suffer certain short and long-term injuries.</p>
 			</div>
 			<div class="col-3 mt-4">
-				<img class="rounded" alt="Gym Images"
-					src="https://tse2.mm.bing.net/th?id=OIP.PaNrCC-6HMUzKNOQy_1wAQHaHa&pid=Api&P=0&h=180">
+				<img style="width:12rem;" class="rounded" alt="Gym Images"
+					src="http://healthy-usa.com/fitness/healthy-45.jpg">
 				<p class="text-center mt-5" style="font-family: FontAwesome;">Therefore,
 					you should ensure that all new gym members receive a detailed
 					induction before they are allowed to use the gym. This will help
@@ -167,18 +169,19 @@ header+* {
 					overall well-being and success.</p>
 			</div>
 			<div class="col-6 mt-4 mb-4">
-				<img class="rounded" alt="Gym Images"
-					src="https://ae01.alicdn.com/kf/HTB1Ys01LpXXXXakXVXXq6xXFXXXg/Environmental-weightlifting-barbell-bed-dual-combination-packages-50-kg-bag-plastic-dumbbell-piece-plating-Men-s.jpg">
+				<img style="width: 36rem; height: 33rem;" class="rounded"
+					alt="Gym Images"
+					src="https://images-na.ssl-images-amazon.com/images/I/81MfpEKzToL._SL1500_.jpg">
 			</div>
 		</div>
 	</div>
 
 
 
-	<div class="container visits mb-4 text-white">
+	<div class="container booked mb-4 text-white bg-dark">
 		<div class="col-xxl-2 text-center">
 			<div class="inner-row">
-				<div class="this-inner-row pt-5">
+				<div class="this-inner-row pt-5" style="height: 35rem;">
 					<div class="this-inner-text-row" style="margin-top: 2rem;">
 						<h2
 							style="text-decoration: underline; color: brown; font-size: 3rem; font-family: auto;">IYOCK
@@ -186,21 +189,34 @@ header+* {
 						<h3 style="font-size: 30px; color: brown; font-family: auto;">BIGGER
 							. FASTER . STRONGER</h3>
 					</div>
-					<div class="card text-white bg-success mt-5 text-center"
-						style="max-width: 18rem; margin-left: 25.5rem;">
-						<div class="card-header">GYM PASS</div>
-						<div class="card-body">
-							<h5 class="card-title">Free One Day</h5>
-							<p class="card-text">book your visits if you like our gym so
-								you can take admission.</p>
-							<p class="card-text">(online as well as offline)</p>
-							<a href="Contact-us" class="btn btn-success">Get Started</a>
+					<div class="card mb-3"
+						style="max-width: 540px; margin-left: 18rem; margin-top: 4rem;">
+						<div class="row g-0">
+							<div class="col-md-5">
+								<img
+									src="https://c.wallhere.com/photos/c3/66/women_Bodybuilder_muscles_rear_view_fitness_model-122543.jpg!d"
+									class="img-fluid rounded-start" alt="one day visit image"
+									style="height: -webkit-fill-available;">
+							</div>
+							<div class="col-md-7">
+								<div class="card-body text-white bg-dark">
+									<h5 class="card-title">Free One Day</h5>
+									<p class="card-text">book your visits if you like our gym
+										so you can take admission.</p>
+									<p class="card-text">
+										<small class="text-muted">(online as well as offline)</small>
+									</p>
+									<a href="Contact-us" class="btn btn-outline-dark">Get Started</a>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
+
+
 
 	<jsp:include page="temples/LoginModal.jsp"></jsp:include>
 

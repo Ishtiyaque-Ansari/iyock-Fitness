@@ -1,5 +1,4 @@
 <!DOCTYPE HTML>
-<%@page import="com.iyock.gymmanager.type.Package"%>
 <html>
 <head>
 <meta charset="UTF-8"></meta>
@@ -29,12 +28,12 @@
 
 
 <body class="bg-dark">
-	<form action="${createUrl}" method="post">
+	<form action="/Admin/create" method="post">
 		<div class="main-container">
 			<div class="form-container">
 				<div class="content">
 					<h3 class="text-light text-center text-uppercase mt-2"
-						style="text-decoration: underline;">${loginType}</h3>
+						style="text-decoration: underline;">Member details</h3>
 					<div class="container mt-5">
 						<div class="row">
 							<div class="col-6">
@@ -55,9 +54,8 @@
 
 								<div class="input-group w-auto mb-3">
 									<input class="form-control" type="text" placeholder="Gender"
-										name="gender">
-									<input class="form-control"
-										type="date" name="dob">
+										name="gender"> <input class="form-control"
+										type="datetime-local" name="dob">
 								</div>
 
 								<div class="input-group w-auto mb-3">
@@ -82,14 +80,15 @@
 							</div>
 							<div class="col-6">
 								<h4 class="text-center text-white">General information</h4>
-								<select name="memberShipPackage" class="form-select form-select mb-3"
+								<select name="package" class="form-select form-select mb-3"
 									aria-label=".form-select-lg example" required>
-									<% for (Package pkg : Package.values()) { %>
-								        <option value="<%= pkg.name() %>"> 
-								        <%= pkg.name() %> - <%= pkg.getPrice() %> for <%= pkg.getDuration() %>
-									</option>
-								    <% } %>
-									
+									<option selected>Choose Membership</option>
+									<option value="1">Normal Pass(500-1Month with Cardio
+										700)</option>
+									<option value="2">Silver Pass(1200-3Months with Cardio
+										1500)</option>
+									<option value="3">Golden Pass(4500-1year with Cardio
+										5000)</option>
 								</select>
 
 								<!-- Button trigger modal -->
@@ -125,9 +124,10 @@
 									<option value="3">Evening (09:00 to 11:00)</option>
 									<option value="3">Evening (10:00 to 12:00)</option>
 								</select>
-								
+
 								<div class="text-center">
-									<button type="submit" id="submitButton" class="btn btn-light btn-lg mt-1">Submit</button>
+									<button type="submit" class="btn btn-light btn-lg mt-1">Add
+										Member</button>
 								</div>
 
 							</div>
@@ -174,18 +174,16 @@
 						</button>
 					</div>
 					<div class="modal-body">
-						<img style="width: 17rem; margin-left: 6rem;" alt="" src="../images/Barcode.jpeg">
+						<img style="with: 4rem" alt="" src="../images/Barcode.jpeg">
 					</div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-success" data-dismiss="modal">Done</button>
 					</div>
 				</div>
 			</div>
-		</div>		
-		
-		<input type="hidden" id="joiningDate" name="joiningDate">
-	</form>
-	<script>
+		</div>
+
+		<script>
 			// JavaScript to open modal on select change
 			$(document).ready(function() {
 				$('#exampleSelect').change(function() {
@@ -198,11 +196,7 @@
 					}
 				});
 			});
-			
-			//submit button click and joining date print
-		document.getElementById('submitButton').addEventListener('click', function() {
-        document.getElementById('joiningDate').value = new Date().toISOString();
-    });
 		</script>
+	</form>
 </body>
 </html>

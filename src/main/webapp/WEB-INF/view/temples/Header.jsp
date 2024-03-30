@@ -33,7 +33,7 @@
 				<li><button type="button" class="btn btn-link"
 						data-bs-toggle="modal" data-bs-target="#exampleModal"
 						title="Admission, Log In & Create ">
-						Log In<i class="text-danger">+</i>
+						${empty username ? 'Log In<i class="text-danger">+</i>' : username}
 					</button></li>
 			</ul>
 		</div>
