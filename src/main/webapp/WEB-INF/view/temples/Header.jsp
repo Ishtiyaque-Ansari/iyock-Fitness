@@ -30,7 +30,7 @@
 					href="Gallery">Gallery</a></li>
 				<li class="nav-item"><a class="nav-button nav-link text-white"
 					href="Contact-us">Contact Us</a></li>
-				<li><button type="button" class="btn btn-link"
+				<li><button class="btn btn-link"
 						data-bs-toggle="modal" data-bs-target="#exampleModal"
 						title="Admission, Log In & Create ">
 						${empty username ? 'Log In<i class="text-danger">+</i>' : username}

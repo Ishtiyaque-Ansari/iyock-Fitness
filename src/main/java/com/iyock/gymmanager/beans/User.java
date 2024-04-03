@@ -1,5 +1,6 @@
 package com.iyock.gymmanager.beans;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.Period;
 import java.time.ZoneId;
@@ -16,11 +17,17 @@ import jakarta.persistence.InheritanceType;
 import jakarta.persistence.Table;
 import jakarta.persistence.Transient;
 
+
 @Entity
 @Table(name="users")
 @Inheritance(strategy = InheritanceType.JOINED)
-public class User {
+public class User implements Serializable{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	@Id @GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer id;
 	
@@ -40,6 +47,12 @@ public class User {
 	
 	private String health;
 	
+	private String gymTiming;
+	
+	private String paymentMode;
+	
+	private String paid;
+	
 	private String address;
 	
 	@DateTimeFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss.SSSX")
@@ -52,8 +65,6 @@ public class User {
 	private Integer age;
 	
 	private String password;
-	
-	private Boolean male;
 	
 	private String gender;
 	
@@ -142,14 +153,6 @@ public class User {
 		this.dob = dob;
 	}
 
-	public Boolean getMale() {
-		return male;
-	}
-
-	public void setMale(Boolean male) {
-		this.male = male;
-	}
-
 	public String getHealth() {
 		return health;
 	}
@@ -206,10 +209,33 @@ public class User {
 	@Override
 	public String toString() {
 		return "User [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", username=" + username
-				+ ", phoneNo=" + phoneNo + ", email=" + email + ", height" + height +   ", weight" + weight +  ", health=" + health + ", address=" + address
-				+ ", joiningDate=" + joiningDate + ", dob=" + dob + ", password=" + password + ", male=" + male
-				+ ", gender=" + gender + "]";
+				+ ", phoneNo=" + phoneNo + ", email=" + email + ", weight=" + weight + ", height=" + height
+				+ ", health=" + health + ", address=" + address + ", joiningDate=" + joiningDate + ", dob=" + dob
+				+ ", age=" + age + ", password=" + password + ", gender=" + gender + "]";
 	}
 
+	public String getGymTiming() {
+		return gymTiming;
+	}
+
+	public void setGymTiming(String gymTiming) {
+		this.gymTiming = gymTiming;
+	}
+
+	public String getPaymentMode() {
+		return paymentMode;
+	}
+
+	public void setPaymentMode(String paymentMode) {
+		this.paymentMode = paymentMode;
+	}
+
+	public String getPaid() {
+		return paid;
+	}
+
+	public void setPaid(String paid) {
+		this.paid = paid;
+	}
 	
 }

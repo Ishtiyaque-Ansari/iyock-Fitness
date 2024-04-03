@@ -20,6 +20,7 @@ public class NotificationController {
 	public String notification() {
 		System.out.println("TestNotification is invoked");
 		User user = new User();
+		user.setEmail("ansarimehtab7@gmail.com");
 		user.setUsername("mehtabansari");
 		user.setFirstName("Mehtab");
 		user.setId(123);

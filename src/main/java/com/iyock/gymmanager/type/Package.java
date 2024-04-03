@@ -18,4 +18,8 @@ public enum Package {
     public String getDuration() {
         return duration;
     }
+    
+    public String getValue() {
+    	return name() + " - " + getPrice() + " for " + getDuration();
+    }
 }

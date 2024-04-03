@@ -1,17 +1,20 @@
 package com.iyock.gymmanager.beans;
 
+import com.iyock.gymmanager.type.Package;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
 import lombok.Data;
-import com.iyock.gymmanager.type.Package;
 
 @Data
 @Entity
 public class Member extends User {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 
 	private Integer balance;
 	
@@ -22,6 +25,15 @@ public class Member extends User {
 
 	@Enumerated(EnumType.STRING)
 	private Package memberShipPackage;
+	
+	@Override
+	public String toString() {
+		return super.toString() + "\nMember [balance=" + balance + ", status=" + status + ", imageUrl=" + imageUrl + ", memberShipPackage="
+				+ memberShipPackage + "]";
+	}
+	
+	
+	
 	
 }
 

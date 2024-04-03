@@ -19,6 +19,10 @@ import com.iyock.gymmanager.service.MemberService;
 import com.iyock.gymmanager.service.NotificationService;
 import com.iyock.gymmanager.service.UserService;
 
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.PersistenceContext;
+import jakarta.transaction.Transactional;
+
 @Controller
 @RequestMapping("/Admin")
 public class AdminController {
@@ -34,7 +38,7 @@ public class AdminController {
 	
 	@Autowired
 	NotificationService notificationService;
-	
+
 	@GetMapping("login")
 	public ModelAndView login() {
 		ModelAndView mav = new ModelAndView();
@@ -77,13 +81,16 @@ public class AdminController {
 	@PostMapping("/memberCreate")
 	public ModelAndView create(@ModelAttribute Member member) {
 		System.out.println(member);
+		member.setUsername((member.getFirstName()+member.getLastName()).toLowerCase());
 		ModelAndView modelAndView = new ModelAndView();
 		Member createdMember = memberService.create(member);
 //		createdMember.setPassword(null);
 		System.out.println("memberCreate before if"+createdMember);
 		if(createdMember.getId() != null || createdMember.getStatus()!=null) {
 			System.out.println("memberCreate inside if");
-			notificationService.notifyUser(createdMember);
+			notificationService.notifyMember(createdMember);
+			modelAndView.addObject("id", createdMember.getId());
+			modelAndView.addObject("username", createdMember.getUsername());
 			modelAndView.setViewName("redirect:homepage");//TODO rename page name and api
 			System.out.println("memberCreate is done inside if: "+ modelAndView);
 		}else {

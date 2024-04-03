@@ -1,17 +1,16 @@
 package com.iyock.gymmanager.serviceimpl;
 
-import java.util.Properties;
-
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.mail.SimpleMailMessage;
+import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Service;
 
+import com.iyock.gymmanager.beans.Member;
 import com.iyock.gymmanager.beans.User;
 import com.iyock.gymmanager.dao.MemberDao;
 import com.iyock.gymmanager.service.NotificationService;
 
-import jakarta.mail.*;
-import jakarta.mail.internet.InternetAddress;
-import jakarta.mail.internet.MimeMessage;
+import jakarta.mail.MessagingException;
 
 @Service
 public class NotificationServiceImpl implements NotificationService {
@@ -19,56 +18,39 @@ public class NotificationServiceImpl implements NotificationService {
 	@Autowired
 	MemberDao memberDao;
 
+	@Autowired
+	public JavaMailSender javaMailSender;
+
 	@Override
-	public void notifyUser(User user) {
+	public void notifyMember(Member member) {
 		// TODO Auto-generated method stub
 		try {
-			sendEmail(user.getEmail(), "Member is created",
-					"Hello "+user.getFirstName()+",\n\t Congratulations, You're registerd for IYOCK Fitness Gym and your username is "
-							+ user.getUsername() + " and id is :" + user.getId() + ".");
+			sendEmail(member.getEmail(), "Member is created", createEMailBody(member));
 		} catch (MessagingException e) {
-			// TODO Auto-generated catch block
+			System.err.println(e.getMessage());
 			e.printStackTrace();
 		}
 	}
 
-	public static void sendEmail(String recipientEmail, String subject, String messageBody) throws MessagingException {
-		// Sender's email address and password
-		String senderEmail = "iyockfitness@gmail.com";
-		String senderPassword = "farahji@1";
+	private void sendEmail(String toAddress, String subject, String body) throws MessagingException {
 
-		// SMTP server details
-		String smtpHost = "smtp.gmail.com";
-	    int smtpPort = 587; // or 25, 465, depending on your SMTP server configuration
-
-		// Create properties for the JavaMail session
-		Properties props = new Properties();
-		props.put("mail.smtp.auth", "true");
-		props.put("mail.smtp.starttls.enable", "true");
-		props.put("mail.smtp.host", smtpHost);
-		props.put("mail.smtp.port", smtpPort);
-
-		
-		Authenticator authenticator = new Authenticator() {
-            @Override
-            protected PasswordAuthentication getPasswordAuthentication() {
-                return new PasswordAuthentication(senderEmail, senderPassword);
-            }
-        };
-		
-		Session session = Session.getInstance(props, authenticator);
-
-		// Create a MimeMessage object
-		MimeMessage message = new MimeMessage(session);
-		message.setFrom(new InternetAddress(senderEmail));
-		message.setRecipient(Message.RecipientType.TO, new InternetAddress(recipientEmail));
+		SimpleMailMessage message = new SimpleMailMessage();
+		message.setTo(toAddress);
 		message.setSubject(subject);
-		message.setText(messageBody);
+		message.setText(body);
+		javaMailSender.send(message);
+	}
 
-		// Send the message
-		Transport.send(message);
+	private String createEMailBody(Member member) {
+		return "Hello " + member.getFirstName()
+				+ ",\n\n\t Congratulations, You're registerd for Iyock Fitness Gym and your username is "
+				+ member.getUsername() + " and id is :" + member.getId() + ".\nYou're allocated the package "+member.getMemberShipPackage().getValue()+"\n\n" + "Best Regards,\n" + "Team Iyock Fitness";
+	}
 
-		System.out.println("Email sent successfully to " + recipientEmail);
+	@Override
+	public void notifyUser(User user) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }
