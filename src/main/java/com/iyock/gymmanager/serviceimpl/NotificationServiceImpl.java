@@ -44,7 +44,7 @@ public class NotificationServiceImpl implements NotificationService {
 	private String createEMailBody(Member member) {
 		return "Hello " + member.getFirstName()
 				+ ",\n\n\t Congratulations, You're registerd for Iyock Fitness Gym and your username is "
-				+ member.getUsername() + " and id is :" + member.getId() + ".\nYou're allocated the package "+member.getMemberShipPackage().getValue()+"\n\n" + "Best Regards,\n" + "Team Iyock Fitness";
+				+ member.getUsername() + " and Password is " + member.getPassword() + " and id is :" + member.getId() + ".\nYou're allocated the package "+member.getMemberShipPackage().getValue()+"\n\n" + "Best Regards,\n" + "Team Iyock Fitness";
 	}
 
 	@Override

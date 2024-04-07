@@ -56,7 +56,9 @@ public class UserController {
         User dbUser = userService.searchByLogin(user);
         System.out.println("dbUser\n" + dbUser);
         if(dbUser != null && dbUser.getId()!= null && dbUser.getId()>0) {
-        	return new ModelAndView("redirect:/index");
+        	ModelAndView mav = new ModelAndView("redirect:/index");
+        	mav.addObject("message", "login successfully");
+        	return mav;
         } else {
         	return new ModelAndView("redirect:../error-page");
         }

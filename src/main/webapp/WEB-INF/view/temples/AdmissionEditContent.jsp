@@ -23,15 +23,24 @@
 							</div>
 
 							<div class="input-group w-auto mb-3">
-								<input class="form-control" id="gender" type="text" placeholder="Gender"
-									name="gender"> <input id="dob" class="form-control" type="date"
+							
+							<select class="form-control" name="gender" id="gender" required>
+								<option selected>Gender</option>
+								<option value="1">Male</option>
+								<option value="2">Female</option>
+								<option value="3">Transgender</option>
+							</select>
+							
+							
+								<!-- <input class="form-control" id="gender" type="text" placeholder="Gender"
+									name="gender"> --> <input id="dob" class="form-control" type="date"
 									name="dob">
 							</div>
 
 							<div class="input-group w-auto mb-3">
-								<input class="form-control" type="number" id="weight" placeholder="Weight"
+								<input class="form-control" type="number" id="weight" placeholder="Weight in kg"
 									name="weight" required> <input class="form-control" id="height"
-									type="number" placeholder="Height" name="height" required>
+									type="number" placeholder="Height in cm(centimeter)" name="height" required>
 							</div>
 
 							<div class="input-group w-auto mb-3">
@@ -82,8 +91,7 @@
 							<div class="input-group w-auto mb-3 mt-3">
 								<span style="width: 40%; font-size: 23px;" class="text-white">Upload
 									Your Image :</span> <input id="image" class="form-control" type="file"
-									placeholder="Choose an image" name="image" accept="image/*"
-									required>
+									placeholder="Choose an image" name="image" accept="image/*">
 							</div>
 
 							<select id="gymTiming" name="gymTiming" class="form-select form-select mb-3"
@@ -160,4 +168,20 @@
 	</div>
 
 	<input type="hidden" id="joiningDate" name="joiningDate">
+	<script>
+	 document.addEventListener("DOMContentLoaded", function () {
+	        var maxDate = new Date();
+	        maxDate.setFullYear(maxDate.getFullYear() - 18);
+	        
+	        var minDate = new Date();
+	        minDate.setFullYear(minDate.getFullYear() + 60);
+
+	        var formattedMaxDate = maxDate.toISOString().split('T')[0];
+	        let formattedMinDate = minDate.toISOString().split('T')[0];
+	        let dob = document.getElementById("dob");
+	        dob.setAttribute("max", formattedMaxDate);
+	        //dob.setAttribute("min", formattedMinDate)
+	    });
+	</script>
+	
 </form>

@@ -33,7 +33,9 @@
 				<li><button class="btn btn-link"
 						data-bs-toggle="modal" data-bs-target="#exampleModal"
 						title="Admission, Log In & Create ">
-						${empty username ? 'Log In<i class="text-danger">+</i>' : username}
+						<c:out value="${username}" />
+						${username == null || username.isEmpty() ? 'Log In<i class="text-danger">+</i>' : username}
+						<%-- <%= username == null ? 'Log In<i class="text-danger">+</i>' : username %> --%>
 					</button></li>
 			</ul>
 		</div>

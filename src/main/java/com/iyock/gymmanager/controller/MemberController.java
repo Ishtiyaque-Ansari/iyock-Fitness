@@ -35,6 +35,7 @@ public class MemberController {
 	public ModelAndView createMember(@ModelAttribute Member member) {
 		System.out.println(member);
 		member.setUsername((member.getFirstName()+member.getLastName()).toLowerCase());
+		member.setPassword((member.getFirstName()+ member.getAge()).toLowerCase());
 		ModelAndView modelAndView = new ModelAndView();
 		Member createdMember = memberService.create(member);
 //		createdMember.setPassword(null);
@@ -43,7 +44,14 @@ public class MemberController {
 			notificationService.notifyMember(createdMember);
 			modelAndView.addObject("id", createdMember.getId());
 			modelAndView.addObject("username", createdMember.getUsername());
-			modelAndView.setViewName("redirect:/index");// TODO rename page name and api
+			if(member.getPaymentMode() != null && member.getPaymentMode().equals("2")) {
+				modelAndView.addObject("paymentAmount", member.getMemberShipPackage().getPrice());
+				modelAndView.setViewName("redirect:/onlinepayment");
+			} else {
+				modelAndView.setViewName("redirect:/error-page");
+				// TODO rename page name and api
+				modelAndView.addObject("message", "select Payment Online");
+			}
 		} else {
 			modelAndView.setViewName("redirect:error-page");
 			modelAndView.addObject("message", "User object not generated properly" + createdMember);

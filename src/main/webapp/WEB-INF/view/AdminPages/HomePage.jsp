@@ -26,14 +26,15 @@
 </head>
 <body>
 	<header>
-		<nav class="navbar navbar-dark bg-dark ">
+		<nav class="navbar"
+			style="background: radial-gradient(seagreen, transparent);">
 			<div class="container-fluid">
-				<a class="navbar-brand text-uppercase">Members</a> <!-- <a
+				<a style="margin-left:auto ;" class="btn navbar-brand text-uppercase">Members</a>
+				<!-- <a
 					href="/Admin/trainer" class="btn btn-outline-secondary text-white"
 					style="margin-left: 39rem;">Add Trainer<i class="text-danger">+</i></a> -->
-				<a href="/Admin/membership"
-					class="btn btn-light text-white"
-					style="margin-left: inherit; ; margin-right: 1rem;">Add Member<i
+				<a href="/Admin/membership" class="btn btn-light"
+					style="margin-left: inherit;; margin-right: 1rem;">Add Member<i
 					class="text-danger">+</i></a>
 				<!-- <form class="d-flex input-group w-auto">
 					<input type="search" class="form-control rounded"
@@ -46,10 +47,11 @@
 			</div>
 		</nav>
 	</header>
+	
 	<%-- <div>
 		<c:out value="${memberName}" />
 	</div> --%>
-	<table class="table table-bordered table-stripted border-dark table-hover mt-1"
+	<table class="table table-success table-stripted border-dark table-hover mt-1"
 		cellSpacing="1">
 		<thead>
 			<tr>
@@ -86,14 +88,15 @@
 		</tbody>
 	</table>
 	<div id="editMemeberPopup" class="modal fade" aria-labelledby="editMemeberModalLabel" aria-hidden="true">
-		<div class="modal-dialog modal-lg ">
+		<div class="modal-dialog modal-xl ">
 			<div class="modal-content bg-dark">
 				<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalLabel">Update Member Details</h5>
+					<h5 style="color: white; margin-left: auto;" class="modal-title"
+						id="exampleModalLabel">Update Member Details</h5>
 					<button style="background-color: seashell;" type="button" class="btn-close" data-bs-dismiss="modal"
 						aria-label="Close"></button>
 				</div>
-				<div class="text-center">
+				<div class="text-center" style="padding-bottom: 1rem;">
 					<jsp:include page="../temples/AdmissionEditContent.jsp" />
 				</div>
 			</div>

@@ -221,13 +221,12 @@ header+* {
 	<jsp:include page="temples/LoginModal.jsp"></jsp:include>
 
 	<script type="text/javascript">
-		windown.onload = fetchMembership()
-		window.onscroll = function() {
-			myFunction()
-		};
+	
+		window.onload = swal("Good job!",${message}, "success");
+		window.onscroll = myFunction
 		
 		
-		fetchMembership() {
+		function fetchMembership() {
 			fetch('/fetchCandidate',{method:'POST', body:1}).then(response=> response.json())
 			.then(membersihp=> {
 				document.getElementById("admitted").innerText = membersihp.admitted
@@ -249,12 +248,11 @@ header+* {
 			}
 		}
 	</script>
-
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 	<footer class="text-center text-white"
 		style="background-color: #21081a;">
 		<jsp:include page="temples/footer.jsp"></jsp:include>
 	</footer>
-
 	<script src="vendor/css/bootstrap.bundle.min.js"></script>
 </body>
 </html>
