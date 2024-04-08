@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.iyock.gymmanager.beans.User;
 import com.iyock.gymmanager.dao.UserDao;
+import com.iyock.gymmanager.repository.UserRepo;
 import com.iyock.gymmanager.service.UserService;
 
 @Service
@@ -15,6 +16,7 @@ public class UserServiceImpl implements UserService{
 	@Autowired
 	UserDao userDao;
 	
+		
 	@Override
 	public User create(User user) {
 		// TODO Auto-generated method stub
@@ -32,5 +34,5 @@ public class UserServiceImpl implements UserService{
 	public List<User> getAllMembers() {
 		return userDao.getAllMembers();
 	}
-
+	
 }

@@ -14,6 +14,4 @@ public interface UserDao {
 	User searchByLogin(User user);
 	
 	List<User> getAllMembers();
-	
-	
 }

@@ -9,4 +9,6 @@ import com.iyock.gymmanager.beans.User;
 public interface UserRepo extends ListCrudRepository<User, Integer> {
  
 	User findByUsernameAndPassword(String username, String password);
+	
+	User findByUsername(String username);
 }

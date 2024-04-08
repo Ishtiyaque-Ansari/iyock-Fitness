@@ -11,4 +11,5 @@ public interface UserService {
 	User create(User user);
 	User searchByLogin(User user);
 	List<User> getAllMembers();
+	
 }
