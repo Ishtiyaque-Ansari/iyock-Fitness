@@ -52,9 +52,9 @@
 	font-family: cursive;
 }
 
-header+* {
+/* header+* {
 	margin-top: 60px;
-}
+} */
 
 .image {
 	background-image: radial-gradient(circle at center, rgba(42, 46, 64, 0)
@@ -99,7 +99,7 @@ header+* {
 	<header><jsp:include page="../temples/Header.jsp"></jsp:include>
 	</header>
 
-	<div class="container-fluid image">
+	<div class="container-fluid image" style="margin-top: 0;">
 		<div class="text-body">
 			<h3 class="text-white" style="padding-left: 7px; padding-top: 10rem;">GYM,
 				EQUIPMENT, EXERCISE</h3>

@@ -1,8 +1,10 @@
 package com.iyock.gymmanager.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -57,5 +59,12 @@ public class MemberController {
 			modelAndView.addObject("message", "User object not generated properly" + createdMember);
 		}
 		return modelAndView;
+	}
+	
+	@PostMapping("/udpateMember")
+	public ResponseEntity<Member> udpateMember(Member member) {
+		System.out.println("member: "+member);
+		Member updatedMemeber = memberService.update(member);
+		return ResponseEntity.accepted().body(updatedMemeber);
 	}
 }

@@ -2,6 +2,7 @@ package com.iyock.gymmanager.serviceimpl;
 
 import java.util.List;
 
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -25,6 +26,18 @@ public class MemberServiceImpl implements MemberService {
 	public Member create(Member member) {
 		// TODO Auto-generated method stub
 		return memberDao.create(member);
+	}
+
+	@Override
+	public void delete(Integer id) {
+		memberDao.deleteById(id);
+	}
+
+	@Override
+	public Member update(Member member) {
+		Member dbMember = memberDao.getMember(member.getId());
+		BeanUtils.copyProperties(member, dbMember, "password", "joiningDate", "age", "dob", "image");
+		return memberDao.update(dbMember);
 	}
 	
 }

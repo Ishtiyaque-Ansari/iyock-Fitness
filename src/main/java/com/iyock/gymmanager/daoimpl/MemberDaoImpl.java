@@ -25,4 +25,22 @@ public class MemberDaoImpl implements MemberDao {
 		return memberRepo.save(member);
 	}
 
+	@Override
+	public void deleteById(Integer id) {
+		// TODO Auto-generated method stub
+		memberRepo.deleteById(id);
+	}
+
+	@Override
+	public Member update(Member member) {
+		// TODO Auto-generated method stub
+		return memberRepo.save(member);
+	}
+
+	@Override
+	public Member getMember(Integer id) {
+		// TODO Auto-generated method stub
+		return memberRepo.findById(id).get();
+	}
+
 }

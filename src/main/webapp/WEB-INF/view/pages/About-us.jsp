@@ -47,9 +47,9 @@
 }
 
 
-header+* {
+/* header+* {
 	margin-top: 80px;
-}
+} */
 
 .image {
 	background-image: radial-gradient(circle at center, rgba(42, 46, 64, 0)
@@ -100,7 +100,8 @@ header+* {
 	<header><jsp:include page="../temples/Header.jsp"></jsp:include>
 	</header>
 
-	<div class="container image rounded">
+	<div class="container image rounded" style="padding-top: 7rem;
+    margin-top: 0;">
 		<div class="text-body">
 			<h1 class="text-white">About Us</h1>
 			<h3 class="text-white">Since 2023</h3>
@@ -111,7 +112,7 @@ header+* {
 		<div class="row">
 			<div class="col-5"></div>
 			<div class="col-7">
-				<h3 class="text-dark text-center" style="margin-top: 15rem; background-color: white;">We launched india's most texhnically advanced fitness
+				<h3 class="text-dark text-center" style="margin-top: 9rem; background-color: white;">We launched india's most texhnically advanced fitness
 					lounge in Govandi(E), Mumbai spread over 1,200 sq. ft. equipped with
 					50+ exercide stations, curanted from 11 of the world's best
 					manufactures.</h3>

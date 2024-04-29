@@ -11,4 +11,8 @@ public interface MemberService {
 	List<Member> getAllMembers();
 
 	Member create(Member member);
+	
+	void delete(Integer id);
+	
+	Member update(Member member);
 }

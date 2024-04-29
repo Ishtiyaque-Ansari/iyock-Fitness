@@ -187,6 +187,9 @@ public class User implements Serializable{
 	
 	
 	public Integer getAge() {
+		if(dob == null) {
+			return 0;
+		}
 		LocalDate birthdate = dob.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
 
 		// Get the current date

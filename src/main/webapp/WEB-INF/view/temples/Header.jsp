@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-dark fixed-top">
+<nav style="margin-top: 1rem" class="navbar navbar-expand-lg navbar-light bg-transparent fixed-top">
 	<div class="container">
 		<a class="typewriter navbar-brand nav-button text-white logo" href="index">IYOCK
 			FITNESS</a>

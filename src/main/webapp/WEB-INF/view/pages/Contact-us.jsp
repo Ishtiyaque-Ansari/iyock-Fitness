@@ -47,7 +47,7 @@
 }
 
 header+* {
-	margin-top: 60px;
+	/* margin-bottom: 1px; */
 }
 
 .image {
@@ -105,10 +105,11 @@ header+* {
 	<!-- =====header===== -->
 	<header><jsp:include page="../temples/Header.jsp"></jsp:include>
 	</header>
-
-	<div class="container-fluid image">
+	
+	<div class="container-fluid image" style="margin-top: 0px;
+    padding-top: 11rem;">
 		<div class="text-body">
-			<h3 class="text-white" style="padding-left: 7px; padding-top: 10rem;">get
+			<h3 class="text-white" style="padding-left: 7px;/*  padding-top: 10rem; */">get
 				in touch</h3>
 			<h1 class="text-white">CONTACT US</h1>
 		</div>

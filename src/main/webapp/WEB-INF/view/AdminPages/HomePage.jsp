@@ -108,6 +108,7 @@
 	
 	function populateMemberPopup(member) {
 		console.log("member", member)
+		$('#id').val(member.id);
 		$('#firstName').val(member.firstName);
 		$('#lastName').val(member.lastName);
 		$('#phoneNo').val(member.phoneNo);
@@ -123,6 +124,8 @@
 		$('#paid').val(member.paid);
 		$('#image').val(member.image);
 		$('#gymTiming').val(member.gymTiming);
+		//$('#memberForm').attr('action', '')
+		$('#memberForm').on('submit', updateMember)
 		
 		console.log("populateMemeberPopup is called	")
 	}
@@ -137,6 +140,40 @@
 		const ageInYears = ageInMilliseconds / (1000 * 60 * 60 * 24 * 365.25); // Approximate days in a year considering leap years
 		const age = Math.floor(ageInYears);
 		
+	}
+	
+	function updateMember(event) {
+	    event.preventDefault(); // Prevent the default form submission
+	    
+	    let member = {};
+	    for (let entry of event.target.elements) {
+	        if (entry.name) {
+	            member[entry.name] = entry.value;
+	        }
+	    }
+
+	    fetch("/Member/updateMember", {
+	        method: "POST",
+	        headers: {
+	            'Content-Type': "application/json"
+	        },
+	        body: JSON.stringify(member)
+	    })
+	    .then(response => {
+	        if (!response.ok) {
+	            throw new Error('Network response was not ok');
+	        }
+	        return response.json();
+	    })
+	    .then(data => {
+	        console.log(data);
+	        $("#editMemberPopup").hide();
+	    })
+	    .catch(error => {
+	        console.error('There was a problem with the fetch operation:', error);
+	    });
+
+	    return false;
 	}
 	</script>
 </body>

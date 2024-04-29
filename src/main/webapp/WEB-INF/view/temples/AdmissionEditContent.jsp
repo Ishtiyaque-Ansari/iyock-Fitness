@@ -1,5 +1,5 @@
 <%@page import="com.iyock.gymmanager.type.Package"%>
-<form action="${createUrl}" method="post">
+<form action="${createUrl}" id="memberForm" method="post">
 	<div class="main-container">
 		<div class="form-container">
 			<div class="content">
@@ -167,7 +167,8 @@
 		</div>
 	</div>
 
-	<input type="hidden" id="joiningDate" name="joiningDate">
+	<input type="hidden" id="joiningDate" name="joiningDate"/>
+	<input type="hidden" id="id" name="id"/>
 	<script>
 	 document.addEventListener("DOMContentLoaded", function () {
 	        var maxDate = new Date();

@@ -75,9 +75,9 @@ to {
 	width: 70rem; */
 }
 
-header+* {
+/* header+* {
 	margin-top: 60px;
-}
+} */
 </style>
 </head>
 <body>
