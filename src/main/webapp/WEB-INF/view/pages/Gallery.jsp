@@ -222,7 +222,7 @@
 			<div class="col-6">
 				<h4 class="text-center">Shoulder</h4>
 				<img style="height: 20rem; width: 38rem;" alt="gym-images"
-					src="https://tricepworkoutsgym.com/wp-content/uploads/2020/11/Shoulder-Workout-Routine.jpg">
+					src="http://all-bodybuilding.com/wp-content/uploads/2016/07/Dumbbell2BExercises2Bfor2BShoulders.jpg">
 			</div>
 			<div class="col-6">
 				<h4 class="text-center">Leg</h4>

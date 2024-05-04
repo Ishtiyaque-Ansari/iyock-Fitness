@@ -118,34 +118,101 @@ header+* {
 		</div>
 	</div>
 
-	<div class="container mt-4">
-		<div class="row">
-			<div class="col-5">
-				<h1 class="text-dark text-uppercase">BOOK YOUR VISIt</h1>
-				<div class="contacts-input">
-					<input class="contact-input mb-2" type="text"
-						placeholder="First Name" /> <input class="contact-input mb-2"
-						type="text" placeholder="Last Name" /> <input
-						class="contact-input mb-2" type="email" placeholder="Gmail" />
-					<div class="input-group mb-2" style="width: 100%;">
-						<input type="tel" placeholder="Phone No" class="form-control"
-							aria-label="Text input with dropdown button"> <select
-							class="form-select" aria-label="Default select example">
-							<option selected>Branches</option>
-							<option value="1">Govandi</option>
-							<option value="2">Sanpada</option>
-							<option value="3">Airoli</option>
-							<option value="4">Mira Road</option>
-							<option value="5">Thane</option>
-						</select>
+	<main>
+		<div class="container py-5">
+			<div class="row g-5">
+				<!-- Contact Information Block -->
+				<div class="col-xl-6">
+					<div class="row row-cols-md-2 g-4">
+						<div class="aos-item" data-aos="fade-up" data-aos-delay="200">
+							<div class="aos-item__inner">
+								<div class="bg-light hvr-shutter-out-horizontal d-block p-3">
+									<div class="d-flex justify-content-start">
+										<i class="fa-solid fa-envelope h3 pe-2"></i> <span class="h5">Email</span>
+									</div>
+									<span>iyockfitness@gmail.com</span>
+								</div>
+							</div>
+						</div>
+						<div class="aos-item" data-aos="fade-up" data-aos-delay="400">
+							<div class="aos-item__inner">
+								<div class="bg-light hvr-shutter-out-horizontal d-block p-3">
+									<div class="d-flex justify-content-start">
+										<i class="fa-solid fa-phone h3 pe-2"></i> <span class="h5">Phone</span>
+									</div>
+									<span>+9137756575, +8451942607</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="aos-item mt-4" data-aos="fade-up" data-aos-delay="600">
+						<div class="aos-item__inner">
+							<div class="bg-light hvr-shutter-out-horizontal d-block p-3">
+								<div class="d-flex justify-content-start">
+									<i class="fa-solid fa-location-pin h3 pe-2"></i> <span
+										class="h5">Office location</span>
+								</div>
+								<span>PLOT NO. 3,4,5, SECTOR 2, SANPADA (W), BEHIND SANPADA RAILWAY STATION, SANPADA, NAVI-MUMBAI – 400705</span>
+							</div>
+						</div>
+					</div>
+					<div class="aos-item" data-aos="fade-up" data-aos-delay="800">
+						<div class="mt-4 w-100 aos-item__inner">
+							<iframe class="hvr-shadow" width="100%" height="345"
+								frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+								src="https://maps.google.com/maps?width=100%25&amp;height=300&amp;hl=en&amp;q=1%20Grafton%20Street,%20Dublin,%20Ireland+()&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
+								<a href="https://www.maps.ie/distance-area-calculator.html">measure
+									acres/hectares on map</a>
+							</iframe>
+						</div>
 					</div>
 				</div>
-				<a href="#" class="btn btn-outline-dark mb-4"
-					style="width: 8rem; margin-left: 72%;">Submit</a>
+
+				<!-- Contact Form Block -->
+				<div class="col-xl-6">
+					<h2 class="pb-4">One Day Visit</h2>
+					<div class="row g-4">
+						<div class="col-6 mb-3">
+							<label for="exampleFormControlInput1" class="form-label">Fname</label>
+							<input name="firstName" type="text" class="form-control"
+								id="exampleFormControlInput1" placeholder="Ishtiyaque">
+						</div>
+						<div class="col-6 mb-3">
+							<label for="exampleFormControlInput1" class="form-label">Lname</label>
+							<input name="secondName" type="text" class="form-control"
+								id="exampleFormControlInput1" placeholder="Ansari">
+						</div>
+					</div>
+					<div class="mb-3">
+						<label for="exampleFormControlInput1" class="form-label">Email</label>
+						<input name="email" type="email" class="form-control"
+							id="exampleFormControlInput1" placeholder="name@example.com">
+					</div>
+					<div class="mb-3">
+						<label for="exampleFormControlInput1" class="form-label">Phone</label>
+						<input name="phoneNo" type="tel" class="form-control"
+							id="exampleFormControlInput1" placeholder="+1234567890">
+					</div>
+					<div class="mb-3">
+						<label for="exampleFormControlInput1" class="form-label">Branches</label>
+						<select class="form-select" aria-label="Default select example">
+							<option value="1">Govandi</option>
+							<option value="1">Sanpada</option>
+							<option value="1">Airoli</option>
+							<option value="1">Mira Road</option>
+							<option value="1">Thane</option>
+						</select>
+					</div>
+					<div class="mb-3">
+						<label for="exampleFormControlTextarea1" class="form-label">Message</label>
+						<textarea class="form-control" id="exampleFormControlTextarea1"
+							rows="3"></textarea>
+					</div>
+					<button type="button" class="btn btn-dark">Send Message</button>
+				</div>
 			</div>
-			<div class="col-7"></div>
 		</div>
-	</div>
+	</main>
 
 	<jsp:include page="../temples/LoginModal.jsp"></jsp:include>
 	<script type="text/javascript">

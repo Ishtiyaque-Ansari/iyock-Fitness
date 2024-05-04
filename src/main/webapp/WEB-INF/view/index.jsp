@@ -80,11 +80,10 @@ to {
 } */
 </style>
 </head>
-<body>
+<body class="bg-dark text-white">
 	<!-- =====header===== -->
 	<header><jsp:include page="temples/Header.jsp"></jsp:include>
 	</header>
-
 
 	<div id="carouselExampleCaptions" class="carousel slide"
 		data-bs-ride="carousel">
@@ -118,20 +117,19 @@ to {
 					<h5>The Iyock Fitness</h5>
 					<p>Our diet should also include whole grains as they help us to
 						be Healthy.</p>
-					<a class="btn btn-outline-info visit-button " href="#"
+					<a class="btn btn-outline-info visit-button " href="Contact-us"
 						role="button">Booked visit</a>
 				</div>
 			</div>
 			<div class="carousel-item">
-				<img
-					src="http://www.zastavki.com/pictures/originals/2015/Girls_Athletic_girl_bodybuilder_095195_.jpg"
+				<img src="https://wallpapercave.com/wp/wp9160535.jpg"
 					class="d-block w-100" alt="third-slide">
 				<div class="carousel-caption d-none d-md-block"
 					style="text-align: center">
 					<h5>The Iyock Fitness</h5>
 					<p>Besides, being physically fit, we must also focus on our
 						mental Health.</p>
-					<a class="btn btn-outline-info visit-button" href="#" role="button">Booked
+					<a class="btn btn-outline-info visit-button" href="Contact-us" role="button">Booked
 						visit</a>
 				</div>
 			</div>
@@ -148,6 +146,140 @@ to {
 		</button>
 	</div>
 
+	<!-- crousel end -->
+	<!-- Trainer Row Start-->
+	<div class="container marketing mt-5">
+		<div class="row text-white" style="margin-top: 3rem">
+			<h2 class="text-center mb-4">Most Famous Mr Olympia</h2>
+			<div class="col-lg-4 text-center">
+				<img
+					src="http://static2.businessinsider.com/image/580e39f4c52402c9008b6841/arnold-schwarzenegger-says-he-wouldve-run-for-president-in-the-2016-election-if-he-were-eligible.jpg"
+					class="bd-placeholder-img rounded-circle" width="140" height="140"
+					role="img" aria-label="Placeholder: 140x140"
+					preserveAspectRatio="xMidYMid slice" focusable="false" />
+
+				<h2>Arnold Schwarzenegger</h2>
+				<p>ARNOLD SCHWARZENEGGER is known all over the globe for his
+					many accomplishments: world champion bodybuilder.</p>
+				<p>
+					<a class="btn btn-secondary" href="Contact-us">Contact Us »</a>
+				</p>
+			</div>
+			<!-- /.col-lg-4 -->
+			<div class="col-lg-4 text-center">
+				<img
+					src="http://3.bp.blogspot.com/_L9MAUaB0xFQ/S8Fa-L074fI/AAAAAAAAANY/rYVxr03dTWw/s1600/rc127.jpg"
+					width="140" height="140" role="img"
+					class="bd-placeholder-img rounded-circle"
+					aria-label="Placeholder: 140x140"
+					preserveAspectRatio="xMidYMid slice" focusable="false" />
+
+				<h2>Ronnie Coleman</h2>
+				<p>The King laid waste to his competition, securing a record
+					eight Mr. Olympia titles (tied with Lee Haney) and 26 pro wins.</p>
+				<p>
+					<a class="btn btn-secondary" href="Contact-us">Contact Us »</a>
+				</p>
+			</div>
+			<!-- /.col-lg-4 -->
+			<div class="col-lg-4 text-center">
+				<img
+					src="https://preview.redd.it/lz8atlg4w2b21.png?auto=webp&s=ba3d3f998feffcc9b4535e5b3979355370e4ec4f"
+					width="140" height="140" role="img"
+					class="bd-placeholder-img rounded-circle"
+					aria-label="Placeholder: 140x140"
+					preserveAspectRatio="xMidYMid slice" focusable="false" />
+
+				<h2>Chris Bumstead</h2>
+				<p>Christopher Adam Bumstead (born 2 February 1995), known by
+					his fans as CBum, is a Canadian IFBB Pro League professional
+					bodybuilder.</p>
+				<p>
+					<a class="btn btn-secondary" href="Contact-us">Contact Us »</a>
+				</p>
+			</div>
+			<!-- /.col-lg-4 -->
+		</div>
+		<!-- /.row -->
+
+	</div>
+	<!-- Trainer Row ENd-->
+	<!-- START THE FEATURETTES -->
+	<div class="container-fluid">
+		<hr class="featurette-divider">
+
+		<div class="row featurette">
+			<div class="col-md-7" style="padding-top: 10rem">
+				<h2 class="featurette-heading">
+					Arnold Schwarzenegger.<span class="text-muted">It blow your
+						mind.</span>
+				</h2>
+				<p class="lead">ARNOLD SCHWARZENEGGER is known all over the
+					globe for his many accomplishments: world champion bodybuilder,
+					Hollywood action hero, successful businessman, environmentalist,
+					philanthropist, best-selling author, and California's 38th
+					Governor.</p>
+			</div>
+			<div class="col-md-5">
+				<img
+					class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+					width="500" height="500"
+					src="http://static2.businessinsider.com/image/580e39f4c52402c9008b6841/arnold-schwarzenegger-says-he-wouldve-run-for-president-in-the-2016-election-if-he-were-eligible.jpg"
+					aria-label="Placeholder: 500x500"
+					preserveAspectRatio="xMidYMid slice" focusable="false" />
+
+			</div>
+		</div>
+
+		<hr class="featurette-divider">
+
+		<div class="row featurette">
+			<div class="col-md-7 order-md-2" style="padding-top: 10rem">
+				<h2 class="featurette-heading">
+					Ronnie Coleman <span class="text-muted">For Nearly a Decate.</span>
+				</h2>
+				<p class="lead">“ The King ” laid waste to his competition,
+					securing a record eight Mr. Olympia titles (tied with Lee Haney)
+					and 26 pro wins during a career that revolutionized the entire
+					sport.</p>
+			</div>
+			<div class="col-md-5 order-md-1">
+				<img
+					class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+					width="500" height="500"
+					src="http://3.bp.blogspot.com/_L9MAUaB0xFQ/S8Fa-L074fI/AAAAAAAAANY/rYVxr03dTWw/s1600/rc127.jpg"
+					aria-label="Placeholder: 500x500"
+					preserveAspectRatio="xMidYMid slice" focusable="false" />
+
+			</div>
+		</div>
+
+		<hr class="featurette-divider">
+
+		<div class="row featurette">
+			<div class="col-md-7" style="padding-top: 10rem">
+				<h2 class="featurette-heading">
+					Chris Bumstead.<span class="text-muted">Mr Olympia 2023.</span>
+				</h2>
+				<p class="lead">Christopher Adam Bumstead (born 2 February
+					1995), known by his fans as CBum, is a Canadian IFBB Pro League
+					professional bodybuilder.</p>
+			</div>
+			<div class="col-md-5">
+				<img style="height: 25rem;"
+					class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+					width="500" height="500"
+					src="https://preview.redd.it/lz8atlg4w2b21.png?auto=webp&s=ba3d3f998feffcc9b4535e5b3979355370e4ec4f"
+					aria-label="Placeholder: 500x500"
+					preserveAspectRatio="xMidYMid slice" focusable="false" />
+
+			</div>
+		</div>
+
+		<hr class="featurette-divider">
+	</div>
+
+	<!-- 
 	<div class="container">
 		<div class="row">
 			<div class="col-3 mt-4">
@@ -155,7 +287,7 @@ to {
 					src="https://res.cloudinary.com/dsmtool-com/image/fetch/if_w_lte_500/w_550/e_improve/if_end/if_w_gt_1600/w_1600/if_end/https://i5.walmartimages.com/asr/bc404e02-9509-4534-abd5-1e79c07d4f5b_1.75d9664f62743478e5a278a6e8952e13.jpeg	">
 				<p class="text-center mt-5" style="font-family: FontAwesome;">Your
 					clients come to your gym to improve their health and fitness.
-					However, if you don’t train them to use your equipment correctly,
+					However, if you donât train them to use your equipment correctly,
 					they could suffer certain short and long-term injuries.</p>
 			</div>
 			<div class="col-3 mt-4">
@@ -165,7 +297,7 @@ to {
 					you should ensure that all new gym members receive a detailed
 					induction before they are allowed to use the gym. This will help
 					clients get the most out of their membership and exercise safely.
-					You’ll also show that your organisation is invested in their
+					Youâll also show that your organisation is invested in their
 					overall well-being and success.</p>
 			</div>
 			<div class="col-6 mt-4 mb-4">
@@ -216,7 +348,7 @@ to {
 		</div>
 	</div>
 
-
+ -->
 
 	<jsp:include page="temples/LoginModal.jsp"></jsp:include>
 
@@ -249,10 +381,7 @@ to {
 		}
 	</script>
 	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-	<footer class="text-center text-white"
-		style="background-color: #21081a;">
-		<jsp:include page="temples/footer.jsp"></jsp:include>
-	</footer>
+	<jsp:include page="temples/footer.jsp"></jsp:include>
 	<script src="vendor/css/bootstrap.bundle.min.js"></script>
 </body>
 </html>

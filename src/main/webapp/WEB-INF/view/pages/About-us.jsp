@@ -104,10 +104,10 @@
     margin-top: 0;">
 		<div class="text-body">
 			<h1 class="text-white">About Us</h1>
-			<h3 class="text-white">Since 2023</h3>
+			<h3 class="text-white">Since 2024</h3>
 		</div>
 		<div class="button-body">
-			<a href="#" class="btn btn-outline-dark">Join Today</a>
+			<a href="Admission" class="btn btn-outline-dark">Join Today</a>
 		</div>
 		<div class="row">
 			<div class="col-5"></div>

@@ -9,25 +9,25 @@
 			</div>
 			<div class="modal-body text-center">
 				<div>
-					<h5>
+					<h5 class="text-dark">
 						If you have any account<a href="User/login" class="btn btn-link">Click
 							Here</a>--log in
 					</h5>
 				</div>
 				<div>
-					<h5>
+					<h5 class="text-dark">
 						Create new account<a href="createOne" class="btn btn-link"
 							style="text-decoration: underline;">Click Here</a>--Create One
 					</h5>
 				</div>
 				<div>
-					<h5>
+					<h5 class="text-dark">
 						Choose For membership<a href="Admission" class="btn btn-link">Click
 							Here</a>--Admission
 					</h5>
 				</div>
 				<div>
-					<h5>
+					<h5 class="text-dark">
 						Exit your account<a href="Log-out" class="btn btn-link">Click
 							Here</a>--Log out
 					</h5>
